@@ -1,0 +1,61 @@
+@import "variables";
+
+.default {
+  &_padding {
+    padding: $default-padding;
+
+    @media (max-width: $desktop-size) {
+      padding: $default-padding-desktop;
+    }
+  
+    @media (max-width: $laptop-size) {
+      padding: $default-padding-laptop;
+    }
+  
+    @media (max-width: $tablet-size) {
+      padding: $default-padding-tablet;
+    }
+  
+    @media (max-width: $mobile-size) {
+      padding: $default-padding-mobile;
+    }
+  }
+
+  &_title {
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+
+      @media (max-width: $tablet-size) {
+        font-size: 24px; 
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+
+      @media (max-width: $tablet-size) {
+        font-size: 20px; 
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+
+      @media (max-width: $tablet-size) {
+        font-size: 16px; 
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+
+      @media (max-width: $tablet-size) {
+        font-size: 14px; 
+      }
+    }
+  };
+}
