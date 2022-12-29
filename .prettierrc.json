@@ -2,5 +2,6 @@
   "trailingCopmma": true,
   "semi": true,
   "singleQuote": true,
-  "indent": 2
+  "indent": 2,
+  "printWidth": 80
 }
