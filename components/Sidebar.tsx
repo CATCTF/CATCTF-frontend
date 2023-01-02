@@ -72,6 +72,7 @@ const Sidebar = () => {
             </SidebarMenuItem>
             {profile?.isAdmin && (
               <SidebarMenuItem
+                target="_blank"
                 href={`${process.env.NEXT_PUBLIC_API_URL}/admin`}
                 style={{ color: 'rgba(255, 255, 255, 0.5)' }}
               >

@@ -30,7 +30,10 @@ const Index = () => {
                 <IndexContent>
                   2023. 1. 14. 9:00 ~ 2023. 1. 15. 9:00
                 </IndexContent>
-                <IndexButton href="https://discord.gg/BvbzyZNjNd">
+                <IndexButton
+                  target="_blank"
+                  href="https://discord.gg/BvbzyZNjNd"
+                >
                   디스코드 서버 참가
                   <IndexButtonImg src="/assets/symbols/right.svg" />
                 </IndexButton>
