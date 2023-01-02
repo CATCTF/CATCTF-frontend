@@ -9,7 +9,7 @@ interface Payload {
   newPassword?: string;
   school?: string;
 }
-const getProfile = async (payload: Payload) => {
+const changeProfile = async (payload: Payload) => {
   try {
     const { data } = await api.put<User>('/profile', payload, {
       headers: {
@@ -22,4 +22,4 @@ const getProfile = async (payload: Payload) => {
   }
 };
 
-export default getProfile;
+export default changeProfile;

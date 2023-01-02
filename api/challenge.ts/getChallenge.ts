@@ -1,10 +1,11 @@
 import { getCookie } from 'cookies-next';
 import Router from 'next/router';
 import api from '..';
+import { ChallengesResDto } from './dto/ChallengeResDto';
 
 const getChallenge = async () => {
   try {
-    const { data } = await api.get('/challennge', {
+    const { data } = await api.get<ChallengesResDto>('/challenge', {
       headers: {
         Authorization: `Bearer ${getCookie('accessToken')}`,
       },

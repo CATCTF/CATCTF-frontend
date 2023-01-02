@@ -2,10 +2,9 @@ import { getCookie } from 'cookies-next';
 import Router from 'next/router';
 import api from '..';
 
-const downloadChallenge = async (fileId: string) => {
+const getNotice = async () => {
   try {
-    const { data } = await api.get(`/challenge/file/${fileId}`, {
-      responseType: 'blob',
+    const { data } = await api.get('/notice', {
       headers: {
         Authorization: `Bearer ${getCookie('accessToken')}`,
       },
@@ -16,4 +15,4 @@ const downloadChallenge = async (fileId: string) => {
   }
 };
 
-export default downloadChallenge;
+export default getNotice;

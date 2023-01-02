@@ -2,14 +2,12 @@ import { getCookie } from 'cookies-next';
 import Router from 'next/router';
 import api from '..';
 
-const uploadChallengeFile = async (file: File, id: string) => {
+const uploadChallengeFile = async (formData: FormData) => {
   try {
-    const formData = new FormData();
-    formData.append('id', id);
-    formData.append('file', file);
-    const { data } = await api.post('/challenge', formData, {
+    const { data } = await api.post('/challenge/file', formData, {
       headers: {
         Authorization: `Bearer ${getCookie('accessToken')}`,
+        'Content-Type': 'multipart/form-data',
       },
     });
     return data;

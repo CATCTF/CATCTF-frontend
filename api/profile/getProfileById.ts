@@ -4,6 +4,7 @@ import api from '..';
 import { User } from './dto/ProfileResDto';
 
 const getProfileById = async (id: string) => {
+  console.log(id);
   try {
     const { data } = await api.get<User>(`/profile/${id}`, {
       headers: {
@@ -12,7 +13,7 @@ const getProfileById = async (id: string) => {
     });
     return data;
   } catch {
-    Router.pathname !== '/login' && Router.push('/login');
+    return undefined;
   }
 };
 

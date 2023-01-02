@@ -1,5 +1,11 @@
 import { Solve } from '../../dto/Solve';
 
+export interface File {
+  id?: string;
+  name?: string;
+  mimetype?: string;
+}
+
 export interface Challenge {
   id?: string;
   name?: string;
@@ -17,10 +23,10 @@ export interface Challenge {
 }
 
 export interface ChallengesResDto {
-  userId: string;
   challenges: Challenge[];
   total: number;
   categories: string[];
+  solves: string[];
 }
 
 export interface ChallengeResDto {

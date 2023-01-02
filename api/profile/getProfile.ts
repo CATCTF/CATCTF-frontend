@@ -12,7 +12,10 @@ const getProfile = async () => {
     });
     return data;
   } catch {
-    Router.pathname !== '/login' && Router.push('/login');
+    Router.pathname !== '/login' &&
+      Router.pathname !== '/register' &&
+      Router.pathname !== '/' &&
+      Router.push('/login');
   }
 };
 

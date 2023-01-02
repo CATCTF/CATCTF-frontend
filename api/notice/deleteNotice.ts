@@ -2,13 +2,17 @@ import { getCookie } from 'cookies-next';
 import Router from 'next/router';
 import api from '..';
 
-const downloadChallenge = async (fileId: string) => {
+interface Payload {
+  id: string;
+}
+
+const deleteNotice = async (payload: Payload) => {
   try {
-    const { data } = await api.get(`/challenge/file/${fileId}`, {
-      responseType: 'blob',
+    const { data } = await api.delete('/notice', {
       headers: {
         Authorization: `Bearer ${getCookie('accessToken')}`,
       },
+      data: payload,
     });
     return data;
   } catch {
@@ -16,4 +20,4 @@ const downloadChallenge = async (fileId: string) => {
   }
 };
 
-export default downloadChallenge;
+export default deleteNotice;

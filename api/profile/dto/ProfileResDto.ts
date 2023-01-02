@@ -1,6 +1,8 @@
 import { Solve } from '../../dto/Solve';
 
 export interface User {
+  point?: number;
+  solved?: number;
   id: string;
   name: string;
   email?: string;

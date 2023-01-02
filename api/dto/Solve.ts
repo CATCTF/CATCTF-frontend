@@ -1,9 +1,9 @@
 import { Challenge } from '../challenge.ts/dto/ChallengeResDto';
-import { User } from '../profile/ProfileResDto';
+import { User } from '../profile/dto/ProfileResDto';
 
 export interface Solve {
   id?: string;
-  createAt: Date;
+  createdAt: Date;
   user?: User;
   challenge?: Challenge;
 }
