@@ -52,6 +52,33 @@ const Register = () => {
       alert('비밀번호가 일치하지 않습니다.');
       return;
     }
+    if (
+      input.id === '' ||
+      input.password === '' ||
+      input.passwordCheck === '' ||
+      input.name === '' ||
+      input.email === '' ||
+      input.school === ''
+    ) {
+      alert('빈칸을 모두 채워주세요.');
+      return;
+    }
+    if (input.password.length < 8) {
+      alert('비밀번호는 8자 이상이어야 합니다.');
+      return;
+    }
+    if (input.password.length > 20) {
+      alert('비밀번호는 20자 이하여야 합니다.');
+      return;
+    }
+    if (input.id.length < 4) {
+      alert('아이디는 4자 이상이어야 합니다.');
+      return;
+    }
+    if (input.id.length > 20) {
+      alert('아이디는 20자 이하여야 합니다.');
+      return;
+    }
     const res = await register({
       name: input.name,
       id: input.id,
