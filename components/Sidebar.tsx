@@ -119,13 +119,14 @@ const ToggleInput = styled.input`
 `;
 
 const ToggleBackground = styled.label`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   transform: translateX(-100%);
   width: 100%;
   height: 100vh;
   transition: 0.8s;
+  z-index: 1;
 `;
 
 const ToggleLabel = styled.label`
@@ -164,7 +165,7 @@ const SidebarWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 2;
 
   @media (max-width: 768px) {
     transform: translateX(-100%);

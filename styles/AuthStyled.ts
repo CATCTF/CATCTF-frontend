@@ -20,7 +20,8 @@ export const AuthInner = styled.div`
 `;
 
 export const ContentWrap = styled.div`
-  width: 360px;
+  width: 85%;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
