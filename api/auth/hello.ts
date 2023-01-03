@@ -1,7 +1,9 @@
 import { getCookie } from 'cookies-next';
 import api from '..';
 
-const hello = async (): Promise<boolean | null> => {
+const hello = async (): Promise<{
+  isAdmin: boolean;
+} | null> => {
   try {
     const { data } = await api.get('/auth', {
       headers: {
