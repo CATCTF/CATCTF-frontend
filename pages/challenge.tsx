@@ -29,7 +29,7 @@ const Challenge = () => {
       const res = await getChallenge();
       const data = await hello();
       setChallenge(res);
-      setIsAdmin(data.isAdmin as boolean);
+      setIsAdmin(data as boolean);
       setInput({
         ...input,
         [res?.challenges.map((item) => item.id) as unknown as string]: '',
