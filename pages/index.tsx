@@ -42,21 +42,21 @@ const Index = () => {
                 <IndexLogoTitle>시상 내역</IndexLogoTitle>
                 <IndexContent>
                   <IndexContentBold theme={theme.first}>1등</IndexContentBold>
-                  &nbsp;&nbsp;&nbsp;갤럭시 버즈2 무선 이어폰
+                  &nbsp;&nbsp;COX CK108 키보드
                 </IndexContent>
                 <IndexContent>
                   <IndexContentBold theme={theme.second}>2등</IndexContentBold>
-                  &nbsp;&nbsp;&nbsp;로지텍 G502 Hero 게이밍 마우스
+                  &nbsp;&nbsp;로지텍 G502 Hero 게이밍 마우스
                 </IndexContent>
                 <IndexContent>
                   <IndexContentBold theme={theme.third}>3등</IndexContentBold>
-                  &nbsp;&nbsp;&nbsp;COX CH57 게이밍 헤드셋
+                  &nbsp;&nbsp;COX 게이밍 헤드셋
                 </IndexContent>
                 <IndexContent>
                   <IndexContentBold theme={theme.special}>
                     특별상
                   </IndexContentBold>
-                  &nbsp;&nbsp;&nbsp;10,000 mAh 보조배터리
+                  &nbsp;&nbsp;10,000 mAh 보조배터리
                 </IndexContent>
               </IndexFlexBottom>
             </IndexItem>
