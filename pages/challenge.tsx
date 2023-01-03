@@ -33,7 +33,7 @@ const Challenge = () => {
       setInput({
         ...input,
         [res?.challenges.map((item) => item.id) as unknown as string]: '',
-      }); 
+      });
       setToggleConnection({
         ...toggleConnection,
         [res?.challenges.map((item) => item.id) as unknown as string]: false,
