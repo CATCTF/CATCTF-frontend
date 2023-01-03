@@ -9,12 +9,15 @@ interface Payload {
 
 const solveChallenge = async (payload: Payload) => {
   try {
-    const { data } = await api.post('/challenge/solve', payload, {
+    const { data } = await api.post<{
+      message: string;
+      correct: boolean;
+    }>('/challenge/solve', payload, {
       headers: {
         Authorization: `Bearer ${getCookie('accessToken')}`,
       },
     });
-    return data;
+    return data as { message: string; correct: boolean };
   } catch {
     Router.pathname !== '/login' && Router.push('/login');
   }

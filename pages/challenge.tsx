@@ -77,9 +77,10 @@ const Challenge = () => {
   };
 
   const submitFlag = async (id: string) => {
+    if (input[id] === null) return alert('flag를 입력해주세요.');
     const data = await solveChallenge({ id, flag: input[id] });
-    if (data.correct === false) {
-      alert(data.message);
+    if (data?.correct === false) {
+      if ((data?.message as string) !== 'Correct flag') alert(data?.message);
     }
     const res = await getChallenge();
     setChallenge(res);
