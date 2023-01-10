@@ -125,7 +125,7 @@ const Register = () => {
                   name="name"
                   value={input.name}
                   onChange={handleChange}
-                  placeholder="이름"
+                  placeholder="닉네임"
                 />
               </ContentInputBox>
               <ContentInputBox>
