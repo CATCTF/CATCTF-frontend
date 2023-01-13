@@ -20,6 +20,7 @@ const Challenge = () => {
     [x: string]: boolean;
   }>({});
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
+  const [uploadSelected, setUploadSelected] = useState<string>('');
 
   const [input, setInput] = useState<{ [x: string]: string }>({});
 
@@ -48,16 +49,13 @@ const Challenge = () => {
     });
   };
 
-  const uploadFile = async (
-    e: React.ChangeEvent<HTMLInputElement>,
-    id: string
-  ) => {
+  const uploadFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     try {
       const files = (e.target as HTMLInputElement).files as FileList;
       const file = files[0];
       const formData = new FormData();
       formData.append('file', file);
-      formData.append('id', id);
+      formData.append('id', uploadSelected);
       await uploadChallengeFile(formData);
       const res = await getChallenge();
       setChallenge(res);
@@ -148,12 +146,17 @@ const Challenge = () => {
                               <>
                                 <ChallengeItemInput
                                   onChange={(e) => {
-                                    return uploadFile(e, item?.id as string);
+                                    uploadFile(e);
                                   }}
                                   id="upload"
                                   type="file"
                                 />
-                                <ChallengeItemLabel htmlFor="upload">
+                                <ChallengeItemLabel
+                                  onClick={() => {
+                                    setUploadSelected(item?.id as string);
+                                  }}
+                                  htmlFor="upload"
+                                >
                                   문제 업로드
                                   <ChallengeItemImage src="/assets/symbols/upload.svg" />
                                 </ChallengeItemLabel>
