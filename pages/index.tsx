@@ -62,6 +62,7 @@ const Index = () => {
             </IndexItem>
           </ContentWrapCenter>
         </IndexInner>
+        <Event>ev3nT_f0r_you{'}'}</Event>
       </IndexWrap>
     </>
   );
@@ -167,6 +168,13 @@ const IndexContentBold = styled.strong`
   font-size: 18px;
 
   color: ${(props) => props.theme};
+`;
+
+const Event = styled.p`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #232428;
 `;
 
 export default Index;

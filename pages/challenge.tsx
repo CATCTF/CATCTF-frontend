@@ -135,7 +135,8 @@ const Challenge = () => {
                           <ChallengeItemTitleWrap>
                             <ChallengeItemTitle>{item.name}</ChallengeItemTitle>
                             <ChallengeItemPoint>
-                              {item.point} Points
+                              {item.point} Points | {item?.solve} Solve |{' '}
+                              {item?.category}
                             </ChallengeItemPoint>
                           </ChallengeItemTitleWrap>
                           <ChallengeItemDescription>
